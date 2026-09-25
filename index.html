@@ -1,146 +1,813 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0c10">
-<meta name="description" content="Ashav Kothari — Senior Android Developer crafting polished mobile apps and thoughtful games with Kotlin and Java.">
-<title>Ashav Kothari — Android Engineer & Product Builder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashav Kothari · Android & iOS App Developer</title>
+<meta name="description" content="Ashav Kothari is a mobile app developer with 8+ years building Android and iOS apps: marketplaces, delivery, enterprise tools and puzzle games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--bg:#0b0c10;--panel:#111319;--panel2:#171a22;--text:#f3f4f6;--muted:#a1a6b3;--line:#292d38;--lime:#c6f36b;--violet:#a995ff;--cyan:#80e5df;--orange:#ffb57a;--radius:22px;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E");z-index:-1}
-a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.mono{font-family:"DM Mono",monospace;letter-spacing:.02em}.eyebrow{color:var(--lime);font:500 12px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.15em;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
-header{height:76px;position:sticky;top:0;z-index:50;background:rgba(11,12,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em}.brand-mark{width:34px;height:34px;border-radius:11px;background:var(--lime);color:#12150c;display:grid;place-items:center;font-size:17px;font-weight:900;transform:rotate(-7deg)}.navlinks{display:flex;gap:28px;align-items:center;color:var(--muted);font-size:13px;font-weight:700}.navlinks a:hover{color:var(--text)}.nav-cta{border:1px solid #424753;border-radius:999px;padding:10px 16px;color:var(--text)!important}.nav-cta:hover{border-color:var(--lime);color:var(--lime)!important}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px}
-.hero{padding:92px 0 76px;position:relative}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}.hero h1{font-size:clamp(48px,6.7vw,88px);line-height:.99;letter-spacing:-.075em;margin:22px 0 25px;font-weight:800}.hero h1 em{font-style:normal;color:var(--lime)}.hero-copy{font-size:17px;color:#b6bac4;max-width:600px;line-height:1.8}.hero-copy strong{color:var(--text);font-weight:700}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 19px;border-radius:999px;font-size:13px;font-weight:800;border:1px solid transparent;transition:.25s;cursor:pointer}.btn-primary{background:var(--lime);color:#10140a}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px #c6f36b22}.btn-ghost{border-color:#393d49;color:var(--text)}.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:35px;color:var(--muted);font:11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em}.hero-meta span{display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 5px #c6f36b18}
-.artboard{min-height:430px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d9ffa0 0,#a7d958 18%,#536e3c 43%,#222b20 69%,transparent 70%);filter:blur(.2px);opacity:.8}.orbit{position:absolute;width:390px;height:170px;border:1px solid #c6f36b50;border-radius:50%;transform:rotate(-32deg)}.orbit.two{transform:rotate(56deg);width:360px;height:200px;border-color:#a995ff55}.orbit:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--lime);top:20%;left:18%;box-shadow:0 0 20px var(--lime)}.floating-card{position:absolute;background:#171a22eF;border:1px solid #ffffff1c;backdrop-filter:blur(16px);border-radius:17px;padding:15px 18px;box-shadow:0 22px 65px #0007;animation:float 6s ease-in-out infinite}.floating-card small{display:block;color:var(--muted);font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.floating-card b{font-size:14px;display:block;margin-top:4px}.fc1{top:48px;left:0}.fc2{bottom:58px;right:-4px;animation-delay:-2s}.fc3{bottom:15px;left:24px;animation-delay:-3.5s}.code-chip{position:absolute;top:142px;right:15px;font:11px "DM Mono",monospace;color:#d8e6c1;background:#1c241a;border:1px solid #536a3d;padding:9px 12px;border-radius:9px;transform:rotate(7deg)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.ticker{border-block:1px solid var(--line);overflow:hidden;background:#0f1015}.ticker-track{display:flex;gap:36px;white-space:nowrap;padding:18px 0;color:#7f8491;font:11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.13em;animation:marquee 34s linear infinite;width:max-content}.ticker-track span{display:flex;align-items:center;gap:36px}.ticker-track i{font-style:normal;color:var(--lime);font-size:16px}@keyframes marquee{to{transform:translateX(-50%)}}
-section{padding:104px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.section-head h2{font-size:clamp(34px,4vw,54px);letter-spacing:-.065em;line-height:1.05;margin:13px 0 0}.section-head p{color:var(--muted);max-width:380px;font-size:14px;margin:0}
-.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-aside{position:relative;border-radius:var(--radius);background:linear-gradient(145deg,#1c2118,#111319 70%);border:1px solid #30392a;min-height:340px;padding:30px;overflow:hidden}.about-aside:after{content:"AK";position:absolute;bottom:-72px;right:-6px;font-size:210px;font-weight:800;letter-spacing:-.13em;color:#c6f36b0b;line-height:1}.aside-tag{display:inline-block;color:var(--lime);font:11px "DM Mono",monospace;border:1px solid #c6f36b55;padding:7px 10px;border-radius:6px}.aside-statement{font-size:29px;line-height:1.2;letter-spacing:-.05em;font-weight:800;max-width:270px;margin-top:60px;position:relative;z-index:1}.aside-statement span{color:var(--lime)}.about-content p{color:#b4b8c2;font-size:15px;line-height:1.9;margin:0 0 18px}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.stat{padding:18px 15px;border:1px solid var(--line);border-radius:14px;background:#101116}.stat strong{display:block;font-size:27px;letter-spacing:-.06em}.stat span{color:var(--muted);font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
-.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.skill{padding:8px 12px;border:1px solid #343844;border-radius:999px;color:#c3c7d0;font-size:11px;font-weight:700;background:#14161d}
-.projects{background:linear-gradient(180deg,transparent,#101116 16%,#101116 85%,transparent)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px}.filter{background:#15171e;border:1px solid #303440;color:#9ca2af;border-radius:999px;padding:9px 15px;font-size:11px;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:var(--lime);border-color:var(--lime);color:#12150c}.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:17px}.project{grid-column:span 4;min-width:0;border:1px solid #2b2f3a;background:#15171e;border-radius:20px;overflow:hidden;transition:transform .3s,border-color .3s;display:flex;flex-direction:column}.project.featured{grid-column:span 8}.project:hover{transform:translateY(-5px);border-color:#65734b}.project[hidden]{display:none}.project-art{height:190px;position:relative;overflow:hidden;background:#20242d;display:grid;place-items:center}.featured .project-art{height:235px}.project-art:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,var(--glow,#c6f36b30),transparent 60%)}.project-art .art-label{position:absolute;left:18px;top:16px;font:10px "DM Mono",monospace;letter-spacing:.12em;color:#ffffff99;text-transform:uppercase}.project-art .art-index{position:absolute;right:17px;top:13px;font:11px "DM Mono",monospace;color:#ffffff70}.art-word{font-size:clamp(27px,4vw,48px);font-weight:800;letter-spacing:-.08em;position:relative;text-shadow:0 8px 30px #0005}.featured .art-word{font-size:clamp(36px,5vw,64px)}.art-word small{display:block;font:10px "DM Mono",monospace;letter-spacing:.15em;text-align:center;margin-top:6px;color:#ffffffa0}.shape{position:absolute;border:1px solid #ffffff2b;border-radius:18px;transform:rotate(-12deg)}.shape.s1{width:110px;height:145px;left:20%;top:25px}.shape.s2{width:100px;height:135px;right:20%;top:45px;transform:rotate(13deg)}.shape.s3{width:74px;height:74px;border-radius:24px;left:calc(50% - 37px);top:58px;background:#ffffff12;backdrop-filter:blur(5px)}.project-body{padding:22px;display:flex;flex-direction:column;flex:1}.project-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.project-type{font:10px "DM Mono",monospace;color:var(--lime);text-transform:uppercase;letter-spacing:.12em}.project-year{color:#777d8b;font:10px "DM Mono",monospace}.project h3{font-size:21px;letter-spacing:-.045em;margin:12px 0 8px}.project p{color:#a8adba;font-size:12px;line-height:1.8;margin:0 0 17px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}.tags span{font:9px "DM Mono",monospace;border:1px solid #353945;border-radius:5px;padding:5px 7px;color:#b6bbc7}.project-foot{border-top:1px solid #2a2d37;margin-top:20px;padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:10px}.project-foot a{font-size:11px;font-weight:800;color:var(--text)}.project-foot a:hover{color:var(--lime)}.project-foot .arrow{color:var(--lime);font-size:18px}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.process-card{padding:23px 20px;border:1px solid var(--line);border-radius:18px;background:#111319;min-height:220px}.process-num{font:11px "DM Mono",monospace;color:var(--lime)}.process-card h3{font-size:17px;letter-spacing:-.04em;margin:28px 0 10px}.process-card p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-.contact{padding-bottom:65px}.contact-box{border:1px solid #3c4730;background:radial-gradient(ellipse at 90% 0%,#c6f36b16,transparent 45%),#131610;border-radius:28px;padding:clamp(28px,6vw,68px);position:relative;overflow:hidden}.contact-box h2{font-size:clamp(39px,6vw,72px);letter-spacing:-.075em;line-height:1.02;margin:20px 0;max-width:780px}.contact-box h2 span{color:var(--lime)}.contact-box p{color:#aeb5a4;max-width:510px;font-size:14px}.contact-row{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:28px}.email-button{border:1px solid #4b5740;border-radius:999px;padding:13px 18px;background:#1b2117;color:#dce8ce;font-size:12px;font-weight:700;cursor:pointer}.email-button:hover{border-color:var(--lime);color:var(--lime)}.contact-note{font:10px "DM Mono",monospace;color:#808b76;margin-top:20px}
-footer{padding:25px 0 35px;border-top:1px solid var(--line);color:#777d8b;font-size:11px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-row strong{color:#c5c8d0}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--lime);color:#11150b;padding:11px 16px;border-radius:999px;font-size:12px;font-weight:800;z-index:100;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:18px}.hero{padding-top:65px}.artboard{min-height:360px}.about-grid{grid-template-columns:1fr;gap:24px}.about-aside{min-height:260px}.aside-statement{margin-top:35px}.project,.project.featured{grid-column:span 6}.process-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.section-head p{max-width:600px}}
-@media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 30px))}header{height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:#111319;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:stretch;gap:17px}.navlinks.open{display:flex}.nav-cta{text-align:center}.hero{padding:55px 0 48px}.hero h1{font-size:clamp(45px,14vw,68px)}.hero-copy{font-size:15px}.artboard{min-height:300px;transform:scale(.9);margin:-10px 0}.orb{width:245px;height:245px}.orbit{width:310px;height:140px}.orbit.two{width:290px;height:150px}.fc1{left:-2px;top:25px}.fc2{right:-6px;bottom:25px}.fc3{left:0;bottom:0}.code-chip{right:0;top:100px}.hero-meta{gap:13px;font-size:9px}.ticker-track{padding:14px 0}.ticker-track span{gap:22px}.ticker-track{gap:22px}section{padding:70px 0}.section-head h2{font-size:38px}.stat-row{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:span 2}.project,.project.featured{grid-column:span 12}.project-art,.featured .project-art{height:190px}.art-word{font-size:43px}.process-grid{grid-template-columns:1fr 1fr;gap:9px}.process-card{padding:17px 14px;min-height:200px}.process-card h3{font-size:15px}.contact-box{border-radius:21px}.contact-box h2{font-size:44px}.footer-row{flex-direction:column}.filters{gap:6px}.filter{padding:8px 12px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:root{
+  --bg:#EDF0F5; --bg-2:#E2E7EF; --surface:#FFFFFF; --ink:#0F1A2E; --muted:#4B5873;
+  --line:rgba(15,26,46,.12); --accent:#9A5700; --accent-fill:#FFB547; --on-accent:#0F1A2E;
+  --sky:#1B5E9E; --glow:rgba(255,181,71,.35); --phone-shadow:0 40px 80px -30px rgba(15,26,46,.45);
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r-sm:10px; --r-md:18px; --r-lg:28px;
+  --pad:clamp(20px,5vw,64px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A2E; --bg-2:#132139; --surface:#172641; --ink:#EEF1F6; --muted:#A2AEC4;
+    --line:rgba(238,241,246,.11); --accent:#FFB547; --sky:#7CC7FF; --glow:rgba(255,181,71,.22);
+    --phone-shadow:0 50px 90px -30px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A2E; --bg-2:#132139; --surface:#172641; --ink:#EEF1F6; --muted:#A2AEC4;
+  --line:rgba(238,241,246,.11); --accent:#FFB547; --sky:#7CC7FF; --glow:rgba(255,181,71,.22);
+  --phone-shadow:0 50px 90px -30px rgba(0,0,0,.7);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.02;margin:0}
+p{margin:0}
+:focus-visible{outline:3px solid var(--accent-fill);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--accent-fill);color:var(--on-accent);padding:10px 16px;border-radius:8px;z-index:100;font-weight:600;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background-color .2s,border-color .2s,box-shadow .25s;will-change:transform}
+.btn-primary{background:var(--accent-fill);color:var(--on-accent);box-shadow:0 10px 30px -10px var(--glow)}
+.btn-primary:hover{box-shadow:0 16px 40px -10px var(--glow)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background-color .3s,box-shadow .3s}
+.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.01em}
+.mono{width:38px;height:38px;border-radius:12px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:15px;letter-spacing:-.04em}
+.nav-links{display:none;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;border-radius:999px;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.nav-cta{display:none}
+.menu-btn{width:48px;height:48px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .3s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,top .3s}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}
+.menu-open .menu-btn span::before{top:0;transform:rotate(45deg)}
+.menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:40;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 100px) var(--pad) calc(env(safe-area-inset-bottom,0px) + 32px);display:flex;flex-direction:column;justify-content:space-between;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.menu-open .sheet{opacity:1;visibility:visible}
+.sheet ul{list-style:none;margin:0;padding:0}
+.sheet li a{display:block;font-family:var(--display);font-size:clamp(40px,11vw,64px);font-weight:700;letter-spacing:-.03em;text-decoration:none;padding:6px 0;line-height:1.1}
+@media (min-width:900px){
+  .nav-links,.nav-cta{display:flex}
+  .menu-btn,.sheet{display:none}
+}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 72px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),var(--glow),transparent 60%);transition:background-position .2s}
+.hero-grid{display:grid;gap:56px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px}}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500;color:var(--muted);margin-bottom:28px}
+.dot{width:9px;height:9px;border-radius:50%;background:#2FBF71;box-shadow:0 0 0 0 rgba(47,191,113,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,191,113,.55)}70%{box-shadow:0 0 0 10px rgba(47,191,113,0)}100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}}
+.hero h1{font-size:clamp(46px,8.2vw,112px);font-weight:750;letter-spacing:-.045em;line-height:.94;max-width:11ch}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:block;transform:translateY(105%);animation:rise 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .ln:nth-child(2) > span{animation-delay:.08s}
+.hero h1 .ln:nth-child(3) > span{animation-delay:.16s}
+@keyframes rise{to{transform:none}}
+.hero-lede{margin-top:28px;font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:52ch;line-height:1.6}
+.hero-lede strong{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);max-width:620px}
+.fact{display:flex;align-items:baseline;gap:10px}
+.fact b{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.03em}
+.fact span{font-size:14px;color:var(--muted);line-height:1.3;max-width:13ch}
+.fade{opacity:0;animation:fade 1s .45s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.hero-stage{display:flex;flex-direction:column;align-items:center;gap:22px;perspective:1400px}
+.tilt{transition:transform .5s cubic-bezier(.2,.8,.2,1);transform:rotateY(var(--ry,-8deg)) rotateX(var(--rx,4deg));transform-style:preserve-3d}
+.hero-caption{display:flex;flex-direction:column;align-items:center;gap:12px;min-height:74px}
+.hero-app{font-family:var(--display);font-weight:600;font-size:17px;text-align:center}
+.hero-app small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted)}
+.pager{display:flex;gap:2px}
+.pager button{width:28px;height:28px;border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center;border-radius:50%}
+.pager button::after{content:"";width:6px;height:6px;border-radius:99px;background:var(--line);transition:width .3s,background-color .3s}
+.pager button[aria-current="true"]::after{width:18px;background:var(--accent-fill)}
+.pager button:hover::after{background:var(--muted)}
+
+/* Phone */
+.phone{--w:290px;width:var(--w);aspect-ratio:9/19;border-radius:calc(var(--w)*.165);padding:calc(var(--w)*.032);background:linear-gradient(150deg,#3A4458 0%,#171D2A 40%,#0B0F18 100%);box-shadow:var(--phone-shadow),inset 0 0 0 1.5px rgba(255,255,255,.12);position:relative;flex:none}
+.phone::before{content:"";position:absolute;right:-2px;top:26%;width:3px;height:12%;border-radius:2px;background:#2A3244}
+.screen{position:relative;width:100%;height:100%;border-radius:calc(var(--w)*.135);overflow:hidden;background:#000;font-size:calc(var(--w) / 29);font-family:var(--body);line-height:1.3;color:#111;isolation:isolate}
+.island{position:absolute;z-index:20;top:1em;left:50%;transform:translateX(-50%);width:8.4em;height:2.4em;border-radius:2em;background:#000}
+.s{position:absolute;inset:0;opacity:0;transform:scale(1.04);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding:4.6em 1.4em 1.6em;overflow:hidden}
+.s.on{opacity:1;transform:none}
+.s .hbar{position:absolute;bottom:.7em;left:50%;transform:translateX(-50%);width:9em;height:.4em;border-radius:1em;background:currentColor;opacity:.35}
+
+/* Screen: Near Book */
+.nb{background:#E4EEE3;color:#14281F;padding:0}
+.nb svg.map{position:absolute;inset:0;width:100%;height:100%}
+.nb .top{position:relative;margin:4.4em 1.2em 0;background:#fff;border-radius:1.4em;padding:1.1em 1.3em;font-size:1.15em;color:#5B6B62;box-shadow:0 .6em 1.6em -.6em rgba(20,40,31,.3);display:flex;gap:.7em;align-items:center}
+.nb .top i{width:1em;height:1em;border:.18em solid #2F7D5B;border-radius:50%;flex:none}
+.nb .nbchips{position:relative;display:flex;gap:.6em;margin:.9em 1.2em 0}
+.nb .nbchips span{background:#fff;border-radius:2em;padding:.5em 1.1em;font-size:1em;font-weight:600;color:#2F7D5B}
+.nb .nbchips span.on{background:#2F7D5B;color:#fff}
+.nb .nbcard{position:absolute;left:.9em;right:.9em;bottom:2em;background:#fff;border-radius:1.8em;padding:1.2em;display:flex;gap:1.1em;align-items:center;box-shadow:0 1em 2.4em -1em rgba(20,40,31,.45)}
+.nb .cover{width:4.6em;height:6.4em;border-radius:.6em;background:linear-gradient(160deg,#F28C28,#C4451C);flex:none;position:relative}
+.nb .cover::after{content:"";position:absolute;left:.7em;right:.7em;top:1.2em;height:.4em;background:rgba(255,255,255,.7);border-radius:1em;box-shadow:0 .9em 0 rgba(255,255,255,.45)}
+.nb .info b{display:block;font-size:1.3em}
+.nb .info span{display:block;font-size:1.05em;color:#5B6B62;margin-top:.2em}
+.nb .info em{display:inline-block;font-style:normal;font-weight:700;color:#2F7D5B;font-size:1.15em;margin-top:.4em}
+.nb .chat{margin-left:auto;background:#2F7D5B;color:#fff;border-radius:1.2em;padding:.8em 1em;font-weight:600;font-size:1em}
+
+/* Screen: Kaasak */
+.ks{background:#1D0A13;color:#F7E8EE}
+.ks .loc small{display:block;font-size:1em;opacity:.6}
+.ks .loc b{font-size:1.5em;font-family:var(--display);letter-spacing:-.02em}
+.ks .srch{margin-top:1em;background:rgba(255,255,255,.08);border-radius:1.3em;padding:1em 1.2em;font-size:1.05em;opacity:.8}
+.ks .grid{display:grid;grid-template-columns:1fr 1fr;gap:.8em;margin-top:1.2em}
+.ks .card{background:rgba(255,255,255,.06);border-radius:1.3em;padding:1em;display:flex;flex-direction:column;align-items:center;gap:.5em}
+.ks .btl{width:2.4em;height:5.6em;border-radius:.9em .9em .5em .5em;position:relative;margin-top:1.4em}
+.ks .btl::before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-1.5em;width:.9em;height:1.8em;border-radius:.3em .3em 0 0;background:inherit}
+.ks .btl::after{content:"";position:absolute;left:.35em;right:.35em;top:2em;height:1.4em;border-radius:.2em;background:rgba(255,255,255,.85)}
+.ks .card span{font-size:1em;opacity:.85}
+.ks .card b{font-size:1.1em;color:#FFB86B}
+.ks .track{margin-top:auto;background:#F7E8EE;color:#1D0A13;border-radius:1.5em;padding:1.1em 1.2em;margin-bottom:.8em}
+.ks .track b{font-size:1.2em}
+.ks .track small{display:flex;justify-content:space-between;font-size:.95em;color:#7A4B5C;margin-top:.2em}
+.ks .bar{height:.5em;border-radius:1em;background:#EAD3DC;margin-top:.8em;overflow:hidden}
+.ks .bar i{display:block;height:100%;width:68%;background:linear-gradient(90deg,#C2185B,#FF7A45);border-radius:1em}
+
+/* Screen: Patches */
+.pt{background:#FBF5EC;color:#2B2231}
+.pt .hd{display:flex;justify-content:space-between;align-items:center}
+.pt .hd b{font-family:var(--display);font-size:1.6em;letter-spacing:-.02em}
+.pt .stars{color:#F2A93B;font-size:1.3em;letter-spacing:.1em}
+.pt .lv{font-size:1em;color:#8C7F8F;margin-top:.1em}
+.pt .board{margin-top:1.6em;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,1fr);aspect-ratio:1;gap:.35em;background:#EDE3D5;padding:.45em;border-radius:1.2em;position:relative}
+.pt .cell{border-radius:.5em;background:#fff;display:grid;place-items:center;font-weight:700;font-size:1.3em;color:#6A5E6E}
+.pt .patch{border-radius:.7em;display:grid;place-items:center;font-weight:700;font-size:1.5em;color:#fff;box-shadow:inset 0 -.3em 0 rgba(0,0,0,.12)}
+.pt .tools{display:flex;justify-content:center;gap:1.4em;margin-top:auto;margin-bottom:1.4em}
+.pt .tools span{width:3.8em;height:3.8em;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 .4em 1em -.4em rgba(43,34,49,.3);font-weight:700;color:#7D5BA6;font-size:1.05em}
+
+/* Screen: Mahjong Card */
+.mj{background:radial-gradient(circle at 50% 30%,#1C6B51,#0B3A2C);color:#E9F5EF}
+.mj .hd{display:flex;justify-content:space-between;align-items:center;font-size:1.1em}
+.mj .hd b{font-family:var(--display);font-size:1.4em}
+.mj .prog{height:.5em;background:rgba(255,255,255,.15);border-radius:1em;margin-top:.8em;overflow:hidden}
+.mj .prog i{display:block;height:100%;width:42%;background:#FFCF5A;border-radius:1em}
+.mj .table{position:relative;flex:1;margin-top:1em}
+.mj .c{position:absolute;width:4.4em;height:6em;background:#FFFDF7;border-radius:.6em;box-shadow:0 .3em .6em rgba(0,0,0,.35);padding:.4em .5em;font-weight:700;font-size:1em;display:flex;flex-direction:column;justify-content:space-between}
+.mj .c i{font-style:normal;font-size:1.9em;align-self:center;line-height:1}
+.mj .c.dim::after{content:"";position:absolute;inset:0;border-radius:.6em;background:rgba(6,30,22,.45)}
+.mj .r{color:#D22F3E}.mj .k{color:#1B2230}
+.mj .tray{display:grid;grid-template-columns:repeat(7,1fr);gap:.35em;background:rgba(0,0,0,.28);padding:.55em;border-radius:1em;margin-bottom:1.2em}
+.mj .tray span{aspect-ratio:3/4;border-radius:.4em;border:.12em dashed rgba(255,255,255,.25)}
+.mj .tray span.f{border:0;background:#FFFDF7;color:#D22F3E;font-weight:700;display:grid;place-items:center;font-size:1em}
+
+/* Screen: QMS */
+.qm{background:#F1F4F8;color:#18263A;padding-top:0}
+.qm .hd{margin:0 -1.4em;padding:4.6em 1.4em 1.4em;background:#0D4E86;color:#fff}
+.qm .hd small{opacity:.75;font-size:1em}
+.qm .hd b{display:block;font-size:1.6em;font-family:var(--display);letter-spacing:-.02em}
+.qm .seg{display:flex;flex-wrap:wrap;gap:.5em;margin-top:1.2em}
+.qm .seg span{font-size:.95em;padding:.5em .9em;border-radius:2em;background:#fff;border:.1em solid #D6DEE8;font-weight:600;color:#44566E}
+.qm .seg span.on{background:#0D4E86;color:#fff;border-color:#0D4E86}
+.qm .f{background:#fff;border-radius:1em;padding:.8em 1em;margin-top:.8em;border:.1em solid #DFE5ED}
+.qm .f small{display:block;font-size:.9em;color:#6C7C92}
+.qm .f b{font-size:1.1em;font-weight:600}
+.qm .ph{display:flex;gap:.6em;margin-top:.8em}
+.qm .ph span{flex:1;height:4.6em;border-radius:.8em;background:linear-gradient(135deg,#A9C2DA,#6D8FB3)}
+.qm .ph span:last-child{background:#fff;border:.15em dashed #B4C2D3;display:grid;place-items:center;color:#6C7C92;font-size:1.6em}
+.qm .qr{display:flex;align-items:center;gap:.8em;margin-top:.8em;font-weight:600;font-size:1.05em;color:#0D4E86}
+.qm .qr i{width:2.2em;height:2.2em;border-radius:.3em;background:conic-gradient(#0D4E86 25%,#fff 0 50%,#0D4E86 0 75%,#fff 0);background-size:.7em .7em;border:.15em solid #0D4E86}
+.qm .act{display:flex;gap:.6em;margin-top:auto;margin-bottom:1em}
+.qm .act span{flex:1;text-align:center;padding:1em 0;border-radius:1em;font-weight:700;font-size:1.05em;border:.12em solid #0D4E86;color:#0D4E86}
+.qm .act span.go{background:#0D4E86;color:#fff}
+
+/* Screen: Quote Orbit */
+.qo{background:linear-gradient(170deg,#231453 0%,#5B2C83 45%,#E07A5F 100%);color:#fff;align-items:center}
+.qo .hd{align-self:stretch;display:flex;justify-content:space-between;font-size:1.1em;font-weight:600;opacity:.9}
+.qo .card{margin:auto 0;width:100%;aspect-ratio:4/5;border-radius:1.6em;background:rgba(255,255,255,.1);border:.1em solid rgba(255,255,255,.25);display:flex;flex-direction:column;justify-content:center;padding:2em 1.6em;position:relative;overflow:hidden}
+.qo .card::before{content:"";position:absolute;width:14em;height:14em;border-radius:50%;border:.15em solid rgba(255,255,255,.2);right:-6em;top:-5em}
+.qo .card::after{content:"";position:absolute;width:1.2em;height:1.2em;border-radius:50%;background:#FFD27A;right:4.4em;top:7.6em;box-shadow:0 0 1.2em #FFD27A}
+.qo q{font-family:Georgia,"Times New Roman",serif;font-size:2.15em;line-height:1.2;quotes:"\201C" "\201D"}
+.qo .card small{margin-top:1.2em;opacity:.75;font-size:1em}
+.qo .tb{display:flex;gap:1em;margin-bottom:1.4em}
+.qo .tb span{width:3.6em;height:3.6em;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;font-weight:700;font-size:1em}
+.qo .tb span.on{background:#fff;color:#5B2C83}
+
+/* Screen: Artoria */
+.ar{background:#FFFFFF;color:#262033}
+.ar .hd{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:1.25em}
+.ar .hd span{font-size:.8em;font-weight:600;padding:.4em .9em;border-radius:2em;background:#F3EEFF;color:#6B4BC7}
+.ar svg{width:100%;flex:1;margin:.6em 0}
+.ar .pal{display:flex;justify-content:space-between;padding:.8em;background:#F6F4FA;border-radius:2em;margin-bottom:1em}
+.ar .pal span{width:2.6em;height:2.6em;border-radius:50%}
+.ar .pal span.on{box-shadow:0 0 0 .25em #fff,0 0 0 .45em #262033}
+
+/* Screen: Status Saver */
+.st{background:#0E2322;color:#E3F4F1}
+.st .hd b{font-family:var(--display);font-size:1.6em;letter-spacing:-.02em}
+.st .tabs{display:flex;gap:.4em;margin-top:1em;background:rgba(255,255,255,.07);padding:.35em;border-radius:1.4em}
+.st .tabs span{flex:1;text-align:center;padding:.6em 0;border-radius:1.1em;font-size:1em;font-weight:600;opacity:.7}
+.st .tabs span.on{background:#25D0A6;color:#062019;opacity:1}
+.st .grid{display:grid;grid-template-columns:1fr 1fr;gap:.6em;margin-top:1em}
+.st .t{aspect-ratio:3/4;border-radius:1em;position:relative;overflow:hidden}
+.st .t .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:2.6em;height:2.6em;border-radius:50%;background:rgba(0,0,0,.35);display:grid;place-items:center}
+.st .t .pl::after{content:"";border-left:.8em solid #fff;border-top:.5em solid transparent;border-bottom:.5em solid transparent;margin-left:.2em}
+.st .t .dl{position:absolute;right:.5em;bottom:.5em;width:2.2em;height:2.2em;border-radius:50%;background:#25D0A6;display:grid;place-items:center}
+.st .t .dl::after{content:"";width:.5em;height:.5em;border-right:.18em solid #062019;border-bottom:.18em solid #062019;transform:rotate(45deg) translate(-.1em,-.1em)}
+
+/* Screen: 2248 */
+.nm{background:radial-gradient(circle at 50% 0%,#2C1766,#120827 70%);color:#fff}
+.nm .hd{display:flex;justify-content:space-between;align-items:flex-end}
+.nm .hd small{display:block;font-size:.9em;opacity:.6}
+.nm .hd b{font-family:var(--display);font-size:2em;letter-spacing:-.02em}
+.nm .best{text-align:right}
+.nm .best b{font-size:1.3em;color:#FFD84D}
+.nm .board{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:.45em;margin-top:1.6em}
+.nm .tile{aspect-ratio:1;border-radius:.8em;display:grid;place-items:center;font-weight:800;font-size:1.25em;font-family:var(--display)}
+.nm svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.nm .boost{display:flex;justify-content:center;gap:1em;margin-top:auto;margin-bottom:1.4em}
+.nm .boost span{width:3.8em;height:3.8em;border-radius:1.1em;background:rgba(255,255,255,.08);border:.1em solid rgba(255,255,255,.14);display:grid;place-items:center;font-size:1.3em}
+
+/* Screen: Arrow Puzzle */
+.aw{background:linear-gradient(180deg,#132A5E,#0A1736);color:#fff}
+.aw .hd{display:flex;justify-content:space-between;align-items:center}
+.aw .hd b{font-family:var(--display);font-size:1.6em}
+.aw .hd span{font-size:1em;padding:.4em 1em;border-radius:2em;background:rgba(255,255,255,.1)}
+.aw .board{display:grid;grid-template-columns:repeat(5,1fr);gap:.45em;margin-top:2em;padding:.6em;background:rgba(255,255,255,.05);border-radius:1.2em}
+.aw .a{aspect-ratio:1;border-radius:.7em;display:grid;place-items:center;box-shadow:inset 0 -.25em 0 rgba(0,0,0,.2)}
+.aw .a svg{width:55%;height:55%}
+.aw .a.gold{background:radial-gradient(circle at 35% 30%,#FFE9A3,#E0A21B 60%,#A86B00);box-shadow:0 0 1.6em rgba(255,200,60,.55),inset 0 -.25em 0 rgba(0,0,0,.2)}
+.aw .moves{text-align:center;margin-top:auto;margin-bottom:1.6em;font-size:1.1em;opacity:.8}
+.aw .moves b{font-size:1.6em;display:block;opacity:1;font-family:var(--display)}
+
+/* Sections */
+section{position:relative}
+.sec{padding:clamp(96px,14vw,168px) 0}
+.sec-head{display:grid;gap:20px;margin-bottom:clamp(48px,7vw,88px)}
+@media (min-width:900px){.sec-head{grid-template-columns:1fr 1fr;align-items:end;gap:48px}}
+.sec-head h2{font-size:clamp(40px,6.4vw,84px);letter-spacing:-.04em;max-width:12ch}
+.sec-head p{color:var(--muted);font-size:clamp(17px,1.5vw,19px);max-width:48ch}
+
+/* Work */
+.work-grid{display:grid;gap:0}
+.stage{display:none}
+@media (min-width:1000px){
+  .work-grid{grid-template-columns:minmax(340px,420px) 1fr;gap:clamp(48px,7vw,110px)}
+  .stage{display:flex;flex-direction:column;align-items:center;gap:28px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);height:calc(100vh - 140px);justify-content:center}
+  .stage .phone{--w:min(290px,34vh)}
+}
+.stage-nav{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 18px;width:100%;max-width:380px}
+.stage-nav a{display:flex;align-items:center;gap:10px;min-height:32px;text-decoration:none;font-size:14px;color:var(--muted);transition:color .2s}
+.stage-nav a::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--line);flex:none;transition:background-color .2s,transform .2s}
+.stage-nav a:hover{color:var(--ink)}
+.stage-nav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.stage-nav a[aria-current="true"]::before{background:var(--accent-fill);transform:scale(1.5)}
+
+.projects{display:flex;flex-direction:column}
+.proj{padding:56px 0;border-top:1px solid var(--line);display:grid;gap:20px;align-content:center}
+.proj:first-child{border-top:0;padding-top:0}
+@media (min-width:1000px){.proj{min-height:78vh;padding:72px 0}.proj:first-child{padding-top:72px}.proj .inline-phone{display:none}}
+.inline-phone{display:flex;justify-content:center;padding:28px 0 12px;border-radius:var(--r-lg);background:var(--bg-2);margin-bottom:8px}
+.inline-phone .phone{--w:min(236px,62vw);box-shadow:0 30px 50px -28px rgba(15,26,46,.55)}
+.proj-idx{font-family:var(--display);font-weight:600;font-size:15px;color:var(--accent)}
+.proj h3{font-size:clamp(36px,4.8vw,60px);letter-spacing:-.04em}
+.proj-meta{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.tag.plat{color:var(--sky)}
+.proj-desc{color:var(--muted);max-width:58ch;font-size:17px}
+.feat{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px 28px;max-width:640px}
+@media (min-width:560px){.feat{grid-template-columns:1fr 1fr}}
+.feat li{display:flex;gap:12px;font-size:15px;line-height:1.45}
+.feat li::before{content:"";width:14px;height:14px;flex:none;margin-top:4px;border-radius:4px;border:2px solid var(--accent-fill)}
+.proj-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.proj-links .btn{min-height:48px;padding:0 20px;font-size:15px}
+.pending{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px;min-height:48px}
+.pending::before{content:"";width:8px;height:8px;border-radius:50%;border:2px solid var(--muted)}
+
+/* Stack */
+.stack{background:var(--bg-2)}
+.platforms{display:grid;gap:16px}
+@media (min-width:760px){.platforms{grid-template-columns:repeat(3,1fr)}}
+.plat-col{background:var(--surface);border-radius:var(--r-lg);padding:32px 28px 30px;border:1px solid var(--line);position:relative;overflow:hidden}
+.plat-col h3{font-size:30px;letter-spacing:-.03em;display:flex;align-items:center;gap:12px}
+.plat-col h3 i{width:14px;height:14px;border-radius:4px;flex:none}
+.plat-col p{color:var(--muted);font-size:15px;margin-top:8px;max-width:34ch}
+.chips{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:14px;font-weight:500;padding:8px 13px;border-radius:10px;background:var(--bg);border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.chips li:hover{border-color:var(--ink);transform:translateY(-2px)}
+.bridge{display:flex;justify-content:center;padding:14px 0;color:var(--muted);font-size:14px;gap:10px;align-items:center}
+.bridge::before,.bridge::after{content:"";height:1px;flex:1;max-width:220px;background:var(--line)}
+.shared{display:grid;gap:16px}
+@media (min-width:760px){.shared{grid-template-columns:repeat(3,1fr)}}
+.shared > div{padding:26px 28px;border-radius:var(--r-md);border:1.5px dashed var(--line)}
+.shared h4{margin:0;font-family:var(--display);font-size:21px;letter-spacing:-.02em}
+.shared .chips{margin-top:16px}
+.shared .chips li{background:transparent}
+
+/* Why */
+.why-grid{display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:800px){.why-grid{grid-template-columns:1fr 1fr}}
+.why{padding:36px 0;border-bottom:1px solid var(--line);display:grid;gap:10px}
+@media (min-width:800px){.why:nth-child(odd){padding-right:48px;border-right:1px solid var(--line)}.why:nth-child(even){padding-left:48px}}
+.why h3{font-size:clamp(24px,2.6vw,32px);letter-spacing:-.03em;line-height:1.1}
+.why p{color:var(--muted);max-width:46ch}
+.why .ev{font-size:14px;color:var(--sky);font-weight:500}
+
+/* Process */
+.process-grid{display:grid;gap:40px}
+@media (min-width:960px){.process-grid{grid-template-columns:.9fr 1.1fr;gap:80px}.process-grid .sec-head{position:sticky;top:140px;align-self:start;grid-template-columns:1fr;margin:0}}
+.steps{list-style:none;margin:0;padding:0 0 0 40px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line);border-radius:2px}
+.steps::after{content:"";position:absolute;left:11px;top:8px;width:2px;height:calc((100% - 16px) * var(--p,0));background:var(--accent-fill);border-radius:2px}
+.step{position:relative;padding:0 0 52px}
+.step:last-child{padding-bottom:0}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:-40px;top:2px;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--line);font-size:0;transition:border-color .4s,background-color .4s}
+.step.lit::before{border-color:var(--accent-fill);background:var(--accent-fill)}
+.step .n{font-family:var(--display);font-weight:600;font-size:15px;color:var(--muted);transition:color .4s}
+.step.lit .n{color:var(--accent)}
+.step h3{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.035em;margin-top:4px}
+.step p{color:var(--muted);margin-top:10px;max-width:50ch}
+
+/* Contact */
+.contact{padding:clamp(110px,16vw,200px) 0;overflow:hidden;isolation:isolate;text-align:center}
+.contact::before{content:"";position:absolute;inset:auto 50% -40% auto;transform:translateX(50%);width:1100px;height:1100px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 60%);z-index:-1}
+.orbit{position:absolute;left:50%;bottom:-520px;width:1000px;height:1000px;margin-left:-500px;border-radius:50%;border:1px solid var(--line);z-index:-1}
+.orbit.o2{width:1400px;height:1400px;margin-left:-700px;bottom:-720px}
+.orbit::after{content:"";position:absolute;top:50%;left:-5px;width:10px;height:10px;border-radius:50%;background:var(--accent-fill);box-shadow:0 0 20px var(--accent-fill)}
+.orbit{animation:spin 60s linear infinite}
+.orbit.o2{animation-duration:90s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.contact p.q{font-size:clamp(18px,2vw,22px);color:var(--muted)}
+.contact h2{font-size:clamp(46px,8.4vw,120px);letter-spacing:-.05em;line-height:.95;max-width:14ch;margin:18px auto 0}
+.contact .hero-ctas{justify-content:center;margin-top:44px}
+.contact small{display:block;margin-top:22px;color:var(--muted);font-size:14px}
+
+footer{border-top:1px solid var(--line);padding:32px 0 40px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--ink);text-underline-offset:3px}
+
+/* Reveal (one moment per section heading only) */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .hero h1 .ln > span{transform:none}
+  .fade{opacity:1}
+  .reveal{opacity:1;transform:none}
+  .tilt{transform:none!important}
+}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="#top" aria-label="Ashav home"><span class="brand-mark">A</span><span>Ashav Kothari<span style="color:var(--lime)">.</span></span></a>
-  <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  <nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#contact" class="nav-cta">Let’s talk ↗</a></nav>
- </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Ashav Kothari, back to top"><span class="mono" aria-hidden="true">AK</span><span>Ashav Kothari</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#why">Why me</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="https://www.upwork.com/freelancers/~01a6d2ac967e464ae7?mp_source=share" target="_blank" rel="noopener">Let's talk</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" aria-label="Open menu"><span></span></button>
+  </div>
 </header>
-<main id="top">
-<section class="hero">
- <div class="wrap hero-grid">
-  <div class="reveal">
-   <div class="eyebrow">Independent mobile app developer</div>
-   <h1>Ideas into<br><em>impactful</em><br>mobile products.</h1>
-   <p class="hero-copy">I’m <strong>Ashav</strong>, a Senior Android Developer with <strong>8+ years of experience</strong> building useful, reliable mobile applications and engaging games. I bring product thinking and engineering care to every screen, interaction, and release.</p>
-   <div class="hero-actions"><a class="btn btn-primary" href="#work">Explore selected work <span>↘</span></a><a class="btn btn-ghost" href="#contact">Start a conversation ↗</a></div>
-   <div class="hero-meta"><span><i class="dot"></i> Android · Kotlin · Java</span><span>50+ apps across products & teams</span></div>
-  </div>
-  <div class="artboard reveal" aria-label="Abstract orbital illustration representing product engineering">
-   <div class="orb"></div><div class="orbit"></div><div class="orbit two"></div>
-   <div class="floating-card fc1"><small>Engineering mindset</small><b>Thoughtful by design.</b></div>
-   <div class="floating-card fc2"><small>From concept to release</small><b>Built for real people ↗</b></div>
-   <div class="floating-card fc3"><small>Product focus</small><b>Useful. Clear. Reliable.</b></div>
-   <div class="code-chip">Kotlin // create value</div>
-  </div>
- </div>
-</section>
-<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Android engineering <i>✳</i> Product-minded development <i>✳</i> Mobile experiences <i>✳</i> Game mechanics <i>✳</i> Kotlin & Java <i>✳</i> Thoughtful UX <i>✳</i></span><span>Android engineering <i>✳</i> Product-minded development <i>✳</i> Mobile experiences <i>✳</i> Game mechanics <i>✳</i> Kotlin & Java <i>✳</i> Thoughtful UX <i>✳</i></span></div></div>
-<section id="about">
- <div class="wrap">
-  <div class="section-head reveal"><div><div class="eyebrow">A little about me</div><h2>Engineering with<br>a product mindset.</h2></div><p>Great mobile products are more than code. They’re a balance of clarity, performance, thoughtful interaction, and dependable execution.</p></div>
-  <div class="about-grid">
-   <div class="about-aside reveal"><span class="aside-tag">HOW I WORK / 01</span><div class="aside-statement">Make complex things feel <span>simple.</span></div></div>
-   <div class="about-content reveal">
-    <p>I’m a Senior Android Developer with 8+ years of experience and work spanning 50+ apps across startups, e-commerce, social, utilities, business tools, and games. I enjoy taking ideas from early product thinking through implementation and toward a polished, production-ready experience.</p>
-    <p>My focus is native Android development with Kotlin and Java, supported by an emphasis on maintainable architecture, practical integrations, responsive interfaces, and user-centered details. I’m comfortable contributing to both feature-rich applications and focused, delightful game experiences.</p>
-    <div class="stat-row"><div class="stat"><strong>8+</strong><span>Years in Android</span></div><div class="stat"><strong>50+</strong><span>Apps across domains</span></div><div class="stat"><strong>Apps <b style="color:var(--lime)">+</b> Games</strong><span>Product range</span></div></div>
-    <div class="skills"><span class="skill">Kotlin</span><span class="skill">Java</span><span class="skill">Android SDK</span><span class="skill">Jetpack / XML</span><span class="skill">MVVM</span><span class="skill">Clean Architecture</span><span class="skill">REST APIs</span><span class="skill">Retrofit / OkHttp</span><span class="skill">Firebase</span><span class="skill">Room / Realm</span><span class="skill">FCM</span><span class="skill">Git</span></div>
-   </div>
-  </div>
- </div>
-</section>
-<section id="work" class="projects">
- <div class="wrap">
-  <div class="section-head reveal"><div><div class="eyebrow">Selected work / 09 projects</div><h2>Different problems.<br>Purpose-built experiences.</h2></div><p>A selection across marketplaces, creative tools, utility apps, and games—each shaped around a clear user need.</p></div>
-  <div class="filters reveal" role="group" aria-label="Filter projects">
-   <button class="filter active" data-filter="all">All projects <span>09</span></button><button class="filter" data-filter="apps">Apps</button><button class="filter" data-filter="games">Games</button><button class="filter" data-filter="marketplace">Marketplace</button><button class="filter" data-filter="creative">Creative</button>
-  </div>
-  <div class="project-grid">
-   <article class="project featured reveal" data-category="marketplace apps">
-    <div class="project-art" style="--glow:#4b9c7b50;background:linear-gradient(135deg,#152b28,#1a3436 52%,#1b2029)"><span class="art-label">Marketplace · Android</span><span class="art-index">01 / 09</span><div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div><div class="art-word" style="color:#d8f7d9">NEAR BOOK<small>BOOKS, CLOSER TO YOU</small></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Community marketplace</span><span class="project-year">Android</span></div><h3>Near Book — Used Book Exchange</h3><p>A location-aware book marketplace for buying, selling, swapping, and donating books. Combines map-based discovery and radius search with ML Kit-assisted book scanning, real-time chat, offers, wishlists, and community trust features.</p><div class="tags"><span>Kotlin / Android</span><span>Google ML Kit OCR</span><span>OpenStreetMap</span><span>FCM</span><span>Localization</span></div><div class="project-foot"><a href="#contact">Discuss a marketplace build <span class="arrow">↗</span></a><span class="mono" style="color:#777d8b;font-size:10px">Explore the idea</span></div></div>
-   </article>
-   <article class="project reveal" data-category="creative apps">
-    <div class="project-art" style="--glow:#b99bff55;background:linear-gradient(135deg,#30244a,#28203c 55%,#181a27)"><span class="art-label">Creative · Android</span><span class="art-index">02 / 09</span><div class="shape s1" style="border-color:#e4d8ff55"></div><div class="shape s2" style="border-color:#ffce9c55"></div><div class="art-word" style="color:#e6dcff">ARTORIA<small>COLOR · DRAW · CREATE</small></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Coloring & drawing</span><span class="project-year">Android</span></div><h3>Artoria — Coloring Book</h3><p>A calm creative studio for every age: themed tap-to-fill coloring pages, a free-draw canvas, smooth brushes, gallery export, offline use, and a one-time Premium upgrade.</p><div class="tags"><span>Canvas interactions</span><span>Offline-first</span><span>Image export</span><span>Premium</span></div><div class="project-foot"><a href="#contact">Build a creative app <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="games">
-    <div class="project-art" style="--glow:#b48cff55;background:linear-gradient(135deg,#17152b,#251b4a 60%,#11131e)"><span class="art-label">Puzzle game</span><span class="art-index">03 / 09</span><div class="art-word" style="color:#d9c8ff;font-size:55px">2248<small>MERGE · CONNECT · GROW</small></div><div class="shape s1" style="background:#8a5ce933;border-color:#bfaaff77"></div><div class="shape s2" style="background:#12b9a633;border-color:#75f0dc77"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Number merge puzzle</span><span class="project-year">Mobile game</span></div><h3>2248 — Number Merge</h3><p>A polished take on number-merge gameplay, built around connecting matching values, reaching goal tiles, and supporting replay through boosters, themes, and satisfying visual feedback.</p><div class="tags"><span>Game mechanics</span><span>Progression</span><span>Boosters</span><span>Visual polish</span></div><div class="project-foot"><a href="#contact">Discuss a game concept <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="games">
-    <div class="project-art" style="--glow:#5fd9b844;background:linear-gradient(135deg,#102a27,#183c36 58%,#141923)"><span class="art-label">Logic game</span><span class="art-index">04 / 09</span><div class="art-word" style="color:#a5f1c9;font-size:51px">PATCHES<small>LOGIC, IN A CALMER LIGHT</small></div><div class="shape s3" style="border-radius:8px;top:43px;left:calc(50% - 37px);background:#4fcf9b25"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Grid logic puzzle</span><span class="project-year">Android</span></div><h3>Patches — Grid Logic Puzzle</h3><p>A relaxing deduction game with 500 handcrafted puzzles, rectangular patch rules, five difficulty worlds, Daily Challenge, unlimited Zen Mode, hints, undo, and offline play.</p><div class="tags"><span>Game logic</span><span>Level design</span><span>500 levels</span><span>Offline play</span></div><div class="project-foot"><a href="https://play.google.com/store/apps/details?id=com.game.patches.puzzle" target="_blank" rel="noopener">View on Google Play <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="games">
-    <div class="project-art" style="--glow:#e8ad6350;background:linear-gradient(135deg,#35231a,#523421 55%,#191721)"><span class="art-label">Triple-match game</span><span class="art-index">05 / 09</span><div class="shape s1" style="background:#f5d7a91c;border-color:#f5d7a966"></div><div class="shape s2" style="background:#fff4db1c;border-color:#fff4db66"></div><div class="art-word" style="color:#ffe0a9">MAHJONG CARD<small>MATCH THREE · PLAN AHEAD</small></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Card matching puzzle</span><span class="project-year">Android</span></div><h3>Mahjong Card — Match Puzzle</h3><p>A layered triple-match game with a seven-slot tray, 1,000 handcrafted levels, four difficulty tiers, daily challenges, boosters, and progress tracking.</p><div class="tags"><span>Game mechanics</span><span>1,000 levels</span><span>Boosters</span><span>Progression</span></div><div class="project-foot"><a href="https://play.google.com/store/apps/details?id=com.cluvextech.tilecard" target="_blank" rel="noopener">View on Google Play <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="apps">
-    <div class="project-art" style="--glow:#3dc3a844;background:linear-gradient(135deg,#0d302d,#10594d 60%,#111b20)"><span class="art-label">Utility · Android</span><span class="art-index">06 / 09</span><div class="art-word" style="color:#a3f2d9">STATUS SAVER<small>SAVE MOMENTS. SIMPLY.</small></div><div class="shape s3" style="border-radius:50%;background:#20b68b30;border-color:#82f4d555"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Status & story utility</span><span class="project-year">Android</span></div><h3>Status Saver — Video Downloader</h3><p>A straightforward status-saving utility for photos, videos, and stories, with HD saving, one-tap actions, a gallery, built-in playback, sharing, and a lightweight interface.</p><div class="tags"><span>Android</span><span>Media handling</span><span>Gallery</span><span>Sharing</span></div><div class="project-foot"><a href="#contact">Discuss utility app development <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="apps">
-    <div class="project-art" style="--glow:#f2a86a44;background:linear-gradient(135deg,#3b211e,#663a32 60%,#1d1a22)"><span class="art-label">On-demand commerce</span><span class="art-index">07 / 09</span><div class="art-word" style="color:#ffd2b2;font-size:46px">KAASAK<small>ORDER · TRACK · RECEIVE</small></div><div class="shape s1" style="border-color:#ffd2b266"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Delivery application</span><span class="project-year">Android + iOS</span></div><h3>Kaasak — Alcohol Delivery</h3><p>An on-demand delivery experience serving Amman, Jordan, with local supplier browsing, secure checkout, same-day delivery, real-time order tracking, offers, and age verification.</p><div class="tags"><span>Commerce</span><span>Payments</span><span>Order tracking</span><span>Android / iOS</span></div><div class="project-foot"><a href="https://play.google.com/store/apps/details?id=com.kaasak.jo&hl" target="_blank" rel="noopener">Google Play <span class="arrow">↗</span></a><a href="https://apps.apple.com/in/app/kaasak-alcohol-delivery/id1546988389" target="_blank" rel="noopener">App Store ↗</a></div></div>
-   </article>
-   <article class="project reveal" data-category="creative apps">
-    <div class="project-art" style="--glow:#8ea7ff55;background:linear-gradient(135deg,#202443,#30375e 58%,#151722)"><span class="art-label">Creative utility</span><span class="art-index">08 / 09</span><div class="art-word" style="color:#cdd7ff;font-size:46px">QUOTE ORBIT<small>WORDS INTO ART</small></div><div class="shape s2" style="border-color:#d5deff66"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Quote maker</span><span class="project-year">Android</span></div><h3>Quote Orbit — Quote Maker</h3><p>A quote discovery and design tool that turns personal thoughts into shareable artwork with aesthetic backgrounds, on-device storage, no account requirement, and optional Premium features.</p><div class="tags"><span>Creative app</span><span>Image rendering</span><span>On-device storage</span><span>Sharing</span></div><div class="project-foot"><a href="#contact">Create a design-led app <span class="arrow">↗</span></a></div></div>
-   </article>
-   <article class="project reveal" data-category="games">
-    <div class="project-art" style="--glow:#6ca9ff4a;background:linear-gradient(135deg,#10233b,#183e69 58%,#151b2b)"><span class="art-label">Logic game concept</span><span class="art-index">09 / 09</span><div class="art-word" style="color:#c4e4ff;font-size:48px">ARROW PUZZLE<small>TRACE THE WAY THROUGH</small></div><div class="shape s1" style="border-color:#9cd2ff77"></div><div class="shape s2" style="border-color:#ffcf7a77"></div></div>
-    <div class="project-body"><div class="project-top"><span class="project-type">Puzzle game</span><span class="project-year">Mobile game</span></div><h3>Arrow Puzzle</h3><p>A direction-focused puzzle experience with a bold visual identity and a focus on readable board states, clear goals, and satisfying problem-solving interactions.</p><div class="tags"><span>Puzzle design</span><span>Game UI</span><span>Visual systems</span></div><div class="project-foot"><a href="#contact">Talk through a game build <span class="arrow">↗</span></a></div></div></article>
-  </div>
- </div>
-</section>
-<section id="approach">
- <div class="wrap">
-  <div class="section-head reveal"><div><div class="eyebrow">How I approach a build</div><h2>Clear thinking.<br>Careful execution.</h2></div><p>A practical, collaborative process to move from an initial brief to an app that feels coherent, useful, and ready for real users.</p></div>
-  <div class="process-grid">
-   <div class="process-card reveal"><span class="process-num">01 / UNDERSTAND</span><h3>Get to the real problem</h3><p>Align on users, business goals, constraints, and what success should look like before implementation starts.</p></div>
-   <div class="process-card reveal"><span class="process-num">02 / SHAPE</span><h3>Design the experience</h3><p>Map core flows, identify edge cases, and keep the interface focused around the most important user actions.</p></div>
-   <div class="process-card reveal"><span class="process-num">03 / BUILD</span><h3>Engineer for reliability</h3><p>Implement features with maintainability, responsiveness, integration quality, and a dependable user experience in mind.</p></div>
-   <div class="process-card reveal"><span class="process-num">04 / REFINE</span><h3>Polish the details</h3><p>Test key journeys, tighten interactions, address rough edges, and prepare the product for release and iteration.</p></div>
-  </div>
- </div>
-</section>
-<section id="contact" class="contact">
- <div class="wrap"><div class="contact-box reveal"><div class="eyebrow">Have a product in mind?</div><h2>Let’s make something<br><span>worth using.</span></h2><p>Need a new Android app, a thoughtful feature implementation, or help bringing a mobile game to life? Tell me what you’re working on.</p><div class="contact-row"><a class="btn btn-primary" href="mailto:hello@ashav.dev?subject=Let%27s%20talk%20about%20a%20mobile%20project">Email me ↗</a><button class="email-button" id="copyEmail" data-email="hello@ashav.dev">Copy email address</button></div><div class="contact-note">OPEN TO SELECT PROJECTS · ANDROID / MOBILE / GAMES</div></div></div>
-</section>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#why">Why me</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~01a6d2ac967e464ae7?mp_source=share" target="_blank" rel="noopener" style="align-self:flex-start">Hire me on Upwork</a>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="status fade"><span class="dot" aria-hidden="true"></span>Taking new projects on Upwork</p>
+        <h1 aria-label="Android and iOS apps, built to be kept.">
+          <span class="ln" aria-hidden="true"><span>Android and</span></span>
+          <span class="ln" aria-hidden="true"><span>iOS apps, built</span></span>
+          <span class="ln" aria-hidden="true"><span>to be kept.</span></span>
+        </h1>
+        <p class="hero-lede fade">I'm <strong>Ashav Kothari</strong>, a mobile app developer with 8+ years of shipping native and cross-platform apps: marketplaces, delivery, field-operations tools and puzzle games, from first idea to store release.</p>
+        <div class="hero-ctas fade">
+          <a class="btn btn-primary mag" href="https://www.upwork.com/freelancers/~01a6d2ac967e464ae7?mp_source=share" target="_blank" rel="noopener">Let's build something</a>
+          <a class="btn btn-ghost mag" href="#work">Explore my work</a>
+        </div>
+        <div class="facts fade">
+          <div class="fact"><b>8+</b><span>years building for mobile</span></div>
+          <div class="fact"><b>10</b><span>apps and games featured below</span></div>
+          <div class="fact"><b>2</b><span>platforms, native or cross-platform</span></div>
+        </div>
+      </div>
+      <div class="hero-stage fade">
+        <div class="tilt" id="tilt">
+          <div class="phone" style="--w:min(300px,68vw)"><div class="screen" id="heroScreen"><div class="island"></div></div></div>
+        </div>
+        <div class="hero-caption">
+          <p class="hero-app" id="heroApp" aria-live="polite"></p>
+          <div class="pager" id="pager" role="group" aria-label="Preview an app"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="work-h">Things I've built</h2>
+        <p>Ten apps and games, from a book marketplace that reads covers with the camera to a 1,000-level card puzzle. Scroll, and the phone follows along.</p>
+      </div>
+      <div class="work-grid">
+        <aside class="stage" aria-label="App preview">
+          <div class="phone"><div class="screen" id="stageScreen"><div class="island"></div></div></div>
+          <ul class="stage-nav" id="stageNav"></ul>
+        </aside>
+        <div class="projects" id="projects"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec stack" id="stack" aria-labelledby="stack-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="stack-h">One developer, both platforms</h2>
+        <p>Native Android and iOS when the app needs every ounce of the platform. Cross-platform when one codebase gets you to both stores faster. The layer underneath stays the same.</p>
+      </div>
+      <div class="platforms">
+        <div class="plat-col">
+          <h3><i style="background:#3DDC84" aria-hidden="true"></i>Android</h3>
+          <p>Modern Kotlin apps with Compose, and years of XML View experience for existing codebases.</p>
+          <ul class="chips">
+            <li>Kotlin</li><li>Java</li><li>Jetpack Compose</li><li>XML Views</li><li>Android SDK</li><li>Coroutines & Flow</li><li>Room</li><li>Hilt / Dagger</li><li>Retrofit & OkHttp</li><li>WorkManager</li><li>Material Design 3</li><li>Android Studio</li>
+          </ul>
+        </div>
+        <div class="plat-col">
+          <h3><i style="background:#0A84FF" aria-hidden="true"></i>iOS</h3>
+          <p>Swift and SwiftUI for new work, UIKit and Objective-C for apps that have been around a while.</p>
+          <ul class="chips">
+            <li>Swift</li><li>SwiftUI</li><li>UIKit</li><li>Objective-C</li><li>Combine</li><li>async / await</li><li>Core Data</li><li>Core Location & MapKit</li><li>StoreKit</li><li>Human Interface Guidelines</li><li>Xcode</li><li>TestFlight</li>
+          </ul>
+        </div>
+        <div class="plat-col">
+          <h3><i style="background:#FFB547" aria-hidden="true"></i>Cross-platform</h3>
+          <p>One codebase for Android and iOS, without the app feeling out of place on either.</p>
+          <ul class="chips">
+            <li>Flutter</li><li>Dart</li><li>React Native</li><li>TypeScript</li><li>Bloc / Provider / Riverpod</li><li>Redux</li><li>Platform channels</li><li>Native modules</li>
+          </ul>
+        </div>
+      </div>
+      <p class="bridge">Shared foundations</p>
+      <div class="shared">
+        <div>
+          <h4>Backend, APIs and services</h4>
+          <ul class="chips"><li>REST & GraphQL</li><li>Firebase Auth</li><li>Firestore</li><li>Cloud Messaging</li><li>Crashlytics & Analytics</li><li>WebSockets & real-time chat</li><li>Google Maps SDK</li><li>Google ML Kit</li><li>Payment gateways</li><li>In-app purchases</li><li>AdMob</li></ul>
+        </div>
+        <div>
+          <h4>Architecture and quality</h4>
+          <ul class="chips"><li>MVVM</li><li>MVI</li><li>Clean Architecture</li><li>Offline-first data</li><li>Unit testing</li><li>Espresso</li><li>XCTest & XCUITest</li><li>Performance profiling</li></ul>
+        </div>
+        <div>
+          <h4>Shipping</h4>
+          <ul class="chips"><li>Git & GitHub</li><li>CI/CD</li><li>Fastlane</li><li>Google Play Console</li><li>App Store Connect</li><li>Store listings & review</li><li>Release management</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="why" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 id="why-h">What you get working with me</h2>
+        <p>Every point here is backed by something in the work above, not a promise on a page.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why">
+          <h3>Both stores, one person to talk to</h3>
+          <p>Android and iOS, native or cross-platform, so your app behaves properly on whichever phone your users carry.</p>
+          <span class="ev">See Kaasak, live on Google Play and the App Store</span>
+        </div>
+        <div class="why">
+          <h3>Features that go beyond screens</h3>
+          <p>Camera text recognition, maps and location, live chat, delivery tracking, age checks, push notifications and offline modes.</p>
+          <span class="ev">See Near Book, Kaasak and QMS - BRG</span>
+        </div>
+        <div class="why">
+          <h3>Business tools and games alike</h3>
+          <p>A quality-reporting app for field operations sits next to puzzle games with hundreds of handcrafted levels. Both need the same care for detail.</p>
+          <span class="ev">See QMS - BRG, Patches and Mahjong Card</span>
+        </div>
+        <div class="why">
+          <h3>Monetization built in properly</h3>
+          <p>Premium upgrades, one-time purchases and ad-free tiers, set up so they work with Play and App Store rules from day one.</p>
+          <span class="ev">See Artoria and Quote Orbit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="process" aria-labelledby="process-h" style="padding-top:0">
+    <div class="wrap process-grid">
+      <div class="sec-head reveal">
+        <h2 id="process-h">How a project runs</h2>
+        <p>Clear steps and regular check-ins, so you always know where your app stands and what happens next.</p>
+      </div>
+      <ol class="steps" id="steps">
+        <li class="step"><span class="n">01</span><h3>Discover</h3><p>We go through your idea, your users, your business goals and any technical limits, so the scope is clear before a line of code is written.</p></li>
+        <li class="step"><span class="n">02</span><h3>Plan</h3><p>Architecture, platform choice, screen flows, APIs and milestones, agreed up front and mapped to your budget.</p></li>
+        <li class="step"><span class="n">03</span><h3>Build</h3><p>Features land in small, testable pieces with clean, maintainable code you can hand to another developer later.</p></li>
+        <li class="step"><span class="n">04</span><h3>Test</h3><p>Real-device testing, performance tuning and bug fixing across screen sizes and OS versions.</p></li>
+        <li class="step"><span class="n">05</span><h3>Launch</h3><p>Store listings, review submission and release on Google Play and the App Store.</p></li>
+        <li class="step"><span class="n">06</span><h3>Improve</h3><p>Maintenance, crash monitoring, analytics and the next round of features once real users are in.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="orbit o2" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <p class="q">Have an app idea?</p>
+      <h2 id="contact-h">Let's turn it into something people love to use.</h2>
+      <div class="hero-ctas">
+        <a class="btn btn-primary mag" href="https://www.upwork.com/freelancers/~01a6d2ac967e464ae7?mp_source=share" target="_blank" rel="noopener">Start a project on Upwork</a>
+        <a class="btn btn-ghost mag" href="#work">See the work again</a>
+      </div>
+      <small>Send a message on Upwork with a few lines about your app, and I'll reply with questions and next steps.</small>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap footer-row"><div>© <span id="year"></span> <strong>Ashav Kothari</strong>. Built with intention.</div><div>Senior Android Developer <span style="color:var(--lime)">·</span> Kotlin / Java <span style="color:var(--lime)">·</span> Independent</div><a href="#top">Back to top ↑</a></div></footer>
-<div class="toast" id="toast" role="status">Email copied</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ashav Kothari, mobile app developer</span>
+    <a href="https://www.upwork.com/freelancers/~01a6d2ac967e464ae7?mp_source=share" target="_blank" rel="noopener">Upwork profile</a>
+  </div>
+</footer>
+
 <script>
-const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
-const filters=[...document.querySelectorAll('.filter')],projects=[...document.querySelectorAll('.project')];
-filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;projects.forEach(card=>{const cats=card.dataset.category.split(' ');card.hidden=!(f==='all'||cats.includes(f))})}));
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.getElementById('year').textContent=new Date().getFullYear();
-const toast=document.getElementById('toast');document.getElementById('copyEmail').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('copyEmail').dataset.email);toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1900)}catch(e){window.location.href='mailto:'+document.getElementById('copyEmail').dataset.email}});
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Screen builders ---------- */
+  function arrow(rot,color){return '<svg viewBox="0 0 24 24" style="transform:rotate('+rot+'deg)"><path d="M4 12h13M12 5l7 7-7 7" fill="none" stroke="'+color+'" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';}
+
+  var S = {
+    nearbook: function(){
+      return '<div class="s nb"><svg class="map" viewBox="0 0 100 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+
+      '<rect width="100" height="210" fill="#E4EEE3"/><path d="M60 0c-6 30 18 50 10 80s-30 40-24 70 30 40 24 60" fill="none" stroke="#B9DCEB" stroke-width="9"/>'+
+      '<rect x="6" y="96" width="30" height="26" rx="4" fill="#CFE6C7"/><rect x="70" y="150" width="24" height="30" rx="4" fill="#CFE6C7"/>'+
+      '<g stroke="#fff" stroke-width="3.2" fill="none"><path d="M-5 60h110M-5 138h110M28 -5v220M82 -5v220M-5 190l110-40"/></g>'+
+      '<g stroke="#fff" stroke-width="1.6" fill="none" opacity=".9"><path d="M-5 30h110M-5 100h110M-5 168h110M10 -5v220M52 -5v220"/></g>'+
+      '<g><circle cx="28" cy="82" r="3.6" fill="#2F7D5B" stroke="#fff" stroke-width="1.4"/><circle cx="64" cy="104" r="3.6" fill="#2F7D5B" stroke="#fff" stroke-width="1.4"/><circle cx="16" cy="140" r="3.6" fill="#2F7D5B" stroke="#fff" stroke-width="1.4"/><circle cx="84" cy="70" r="3.6" fill="#2F7D5B" stroke="#fff" stroke-width="1.4"/>'+
+      '<circle cx="52" cy="126" r="9" fill="#F28C28" opacity=".22"/><circle cx="52" cy="126" r="4.6" fill="#F28C28" stroke="#fff" stroke-width="1.6"/></g></svg>'+
+      '<div class="top"><i></i>Search books near you</div>'+
+      '<div class="nbchips"><span class="on">Buy</span><span>Swap</span><span>Donate</span></div>'+
+      '<div class="nbcard"><div class="cover"></div><div class="info"><b>Organic Chemistry</b><span>0.8 km away</span><em>₹350</em></div><span class="chat">Chat</span></div><i class="hbar"></i></div>';
+    },
+    kaasak: function(){
+      var cols=[['#B8741A','Aged rum','JD 24'],['#2E6B3A','Dry gin','JD 19'],['#8E1B3A','Red wine','JD 15'],['#C9A227','Lager 6-pack','JD 11']];
+      var g=cols.map(function(c){return '<div class="card"><div class="btl" style="background:'+c[0]+'"></div><span>'+c[1]+'</span><b>'+c[2]+'</b></div>';}).join('');
+      return '<div class="s ks"><div class="loc"><small>Deliver to</small><b>Abdoun, Amman</b></div><div class="srch">Search drinks and offers</div><div class="grid">'+g+'</div>'+
+      '<div class="track"><b>Your order is on the way</b><small><span>Age verified</span><span>Arriving soon</span></small><div class="bar"><i></i></div></div><i class="hbar"></i></div>';
+    },
+    patches: function(){
+      var p=[[1,1,2,3,'#F47C6B',6],[1,4,1,3,'#7D5BA6',3],[3,1,2,2,'#4BB6A3',4],[3,3,3,1,'#F2A93B',3],[2,4,2,2,'#5C8DEB',4],[5,1,2,2,'#E86BA0',4],[4,5,3,2,'#4BB6A3',6]];
+      var h='';p.forEach(function(x){h+='<div class="patch" style="grid-area:'+x[0]+'/'+x[1]+'/span '+x[2]+'/span '+x[3]+';background:'+x[4]+'">'+x[5]+'</div>';});
+      h+='<div class="cell" style="grid-area:4/4">2</div><div class="cell" style="grid-area:5/3"></div><div class="cell" style="grid-area:5/4">4</div><div class="cell" style="grid-area:6/3"></div><div class="cell" style="grid-area:6/4"></div><div class="cell" style="grid-area:1/5 / span 1 / span 2">2</div>';
+      return '<div class="s pt"><div class="hd"><div><b>Medium</b><div class="lv">Level 24 of 100</div></div><span class="stars">★★☆</span></div><div class="board">'+h+'</div><div class="tools"><span>Hint</span><span>Undo</span><span>Reset</span></div><i class="hbar"></i></div>';
+    },
+    mahjong: function(){
+      var c=[[2,6,'A','♠','k',1],[26,4,'Q','♥','r',1],[50,6,'7','♦','r',1],[74,4,'K','♣','k',1],[14,26,'Q','♥','r',0],[38,24,'J','♠','k',0],[62,26,'9','♦','r',0],[2,46,'K','♣','k',0],[26,48,'Q','♥','r',0],[50,46,'3','♠','k',0],[74,48,'A','♥','r',0]];
+      var h=c.map(function(x){return '<div class="c '+x[4]+(x[5]?' dim':'')+'" style="left:'+x[0]+'%;top:'+x[1]+'%"><span>'+x[2]+'</span><i>'+x[3]+'</i></div>';}).join('');
+      return '<div class="s mj"><div class="hd"><b>Level 128</b><span>Hard</span></div><div class="prog"><i></i></div><div class="table">'+h+'</div>'+
+      '<div class="tray"><span class="f">Q♥</span><span class="f">Q♥</span><span></span><span></span><span></span><span></span><span></span></div><i class="hbar"></i></div>';
+    },
+    qms: function(){
+      return '<div class="s qm"><div class="hd"><small>Draft saved offline</small><b>New report</b></div>'+
+      '<div class="seg"><span class="on">Non-conformance</span><span>Observation</span><span>Improvement</span></div>'+
+      '<div class="f"><small>Area</small><b>Production line 3</b></div><div class="f"><small>Description</small><b>Guard rail loose on walkway</b></div>'+
+      '<div class="ph"><span></span><span></span><span>+</span></div><div class="qr"><i></i>Open checklist by QR code</div>'+
+      '<div class="act"><span>Save draft</span><span class="go">Submit</span></div><i class="hbar"></i></div>';
+    },
+    quote: function(){
+      return '<div class="s qo"><div class="hd"><span>Create</span><span>Share</span></div><div class="card"><q>Quiet progress is still progress.</q><small>Your note, Tuesday</small></div>'+
+      '<div class="tb"><span>Aa</span><span class="on">Bg</span><span>✦</span><span>↗</span></div><i class="hbar"></i></div>';
+    },
+    artoria: function(){
+      var pet='';var fills=['#FF8FA3','#FFD166','#FF8FA3','#fff','#FFD166','#fff'];
+      for(var i=0;i<6;i++){pet+='<ellipse cx="50" cy="30" rx="11" ry="19" transform="rotate('+(i*60)+' 50 52)" fill="'+fills[i]+'" stroke="#262033" stroke-width="1.6"/>';}
+      return '<div class="s ar"><div class="hd">Garden <span>Fill</span></div><svg viewBox="0 0 100 130" aria-hidden="true">'+
+      '<path d="M50 70 C 48 95, 52 105, 50 128" stroke="#262033" stroke-width="1.8" fill="none"/><path d="M50 100 C 62 88, 78 92, 80 98 C 70 106, 58 106, 50 100Z" fill="#7BD389" stroke="#262033" stroke-width="1.6"/><path d="M50 112 C 38 100, 22 104, 20 110 C 30 118, 42 118, 50 112Z" fill="#fff" stroke="#262033" stroke-width="1.6"/>'+
+      pet+'<circle cx="50" cy="52" r="9" fill="#7D5BD6" stroke="#262033" stroke-width="1.6"/></svg>'+
+      '<div class="pal"><span style="background:#FF8FA3"></span><span class="on" style="background:#FFD166"></span><span style="background:#7BD389"></span><span style="background:#5DADE2"></span><span style="background:#7D5BD6"></span><span style="background:#262033"></span></div><i class="hbar"></i></div>';
+    },
+    status: function(){
+      var g=['linear-gradient(160deg,#FF9A8B,#FF6A88)','linear-gradient(160deg,#5EE7DF,#3A7BD5)','linear-gradient(160deg,#F6D365,#FDA085)','linear-gradient(160deg,#A18CD1,#FBC2EB)','linear-gradient(160deg,#43E97B,#38F9D7)','linear-gradient(160deg,#FA709A,#FEE140)'];
+      var h=g.map(function(b,i){return '<div class="t" style="background:'+b+'">'+(i%2===0?'<span class="pl"></span>':'')+'<span class="dl"></span></div>';}).join('');
+      return '<div class="s st"><div class="hd"><b>Status Saver</b></div><div class="tabs"><span class="on">Videos</span><span>Images</span><span>Saved</span></div><div class="grid">'+h+'</div><i class="hbar"></i></div>';
+    },
+    merge: function(){
+      var col={2:'#3AA0FF',4:'#22C3A6',8:'#FFB02E',16:'#FF6B4A',32:'#FF3D7F',64:'#B04BFF',128:'#5B6CFF',256:'#00C2E8',512:'#E8B800',1024:'#FF8A3D',2048:'#FF4FD8'};
+      var v=[8,2,16,4,64, 4,4,8,32,2, 128,16,4,8,512, 2,64,32,256,8, 16,8,1024,4,2];
+      var h=v.map(function(n){return '<div class="tile" style="background:'+col[n]+';color:#fff;box-shadow:0 0 1em '+col[n]+'66">'+n+'</div>';}).join('');
+      return '<div class="s nm"><div class="hd"><div><small>Score</small><b>24,816</b></div><div class="best"><small>Best tile</small><b>1024</b></div></div>'+
+      '<div class="board">'+h+'<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="30,30 50,30 50,50 30,50" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/></svg></div>'+
+      '<div class="boost"><span>✦</span><span>⇄</span><span>⌫</span></div><i class="hbar"></i></div>';
+    },
+    arrow: function(){
+      var cols=['#FF5E7E','#35C8FF','#8C6BFF','#2FD39A','#FF9F43'];var rots=[0,90,180,270];
+      var h='';for(var i=0;i<25;i++){ if(i===12){h+='<div class="a gold"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="#fff"/></svg></div>';continue;}
+        var c=cols[(i*3)%5];h+='<div class="a" style="background:'+c+'">'+arrow(rots[(i*7)%4],'#fff')+'</div>'; }
+      return '<div class="s aw"><div class="hd"><b>Level 42</b><span>Pause</span></div><div class="board">'+h+'</div><div class="moves"><b>7</b>moves left</div><i class="hbar"></i></div>';
+    }
+  };
+
+  /* ---------- Project data ---------- */
+  var PLAY='Google Play', AS='App Store';
+  var P=[
+    {id:'nearbook',name:'Near Book',sub:'Used book exchange',tags:['Marketplace','Android app'],
+     desc:'A location-based marketplace where students and readers buy, sell, swap or donate used books with people nearby, found on an interactive map.',
+     feat:['Book-cover scanning with Google ML Kit OCR','AI moderation for listing photos','Real-time chat with price negotiation','Wishlist matching and seller ratings','Academic verification and safe-meetup features','Multilingual, multi-currency support'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.app.nearbook']]},
+    {id:'kaasak',name:'Kaasak',sub:'On-demand alcohol delivery',tags:['Delivery','Android + iOS'],
+     desc:'Beverage delivery for customers in Amman, Jordan. Browse local suppliers, check out securely and follow the order to the door.',
+     feat:['Age verification before purchase','Real-time delivery tracking','Secure in-app payments','Supplier catalogue integration','Promotions and offers','Streamlined browse-to-checkout flow'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.kaasak.jo&hl'],[AS,'https://apps.apple.com/in/app/kaasak-alcohol-delivery/id1546988389']]},
+    {id:'patches',name:'Patches',sub:'Grid logic puzzle',tags:['Puzzle game','Android'],
+     desc:'A calm logic game: divide each board into rectangles using the numbered clues. 500 handcrafted levels across five worlds, from Easy to Master.',
+     feat:['500 handcrafted levels','Five difficulty worlds','Daily Challenges and Zen Mode','Hints, undo and restart','Three-star progression and Flawless badges','Full offline play and themes'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.game.patches.puzzle']]},
+    {id:'mahjong',name:'Mahjong Card',sub:'Triple-match puzzle',tags:['Puzzle game','Android'],
+     desc:'Match three identical playing cards from layered boards while managing a seven-slot tray. Every move needs a little planning.',
+     feat:['1,000 handcrafted levels','Four difficulty tiers','Seven-slot tray mechanic','Undo, Shuffle and Hint boosters','Daily Challenges and bonus rewards','Sound and haptic controls'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.cluvextech.tilecard']]},
+    {id:'qms',name:'QMS - BRG',sub:'Quality and HSEQ management',tags:['Enterprise','Android app'],
+     desc:'A field companion to the QualiCost Management System for reporting non-conformances, observations and improvement proposals, running checklists and logging hours.',
+     feat:['Non-conformance and observation reports','Checklists opened by QR code','Offline report drafts','Photo attachments','Configurable report templates','Task management and timesheets'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.borregaard.qualicost']]},
+    {id:'quote',name:'Quote Orbit',sub:'Quote maker',tags:['Creative tool','Android app'],
+     desc:'Browse inspiring quotes or write your own, then turn them into good-looking designs ready to share. Simple and distraction-free.',
+     feat:['Quote browsing and discovery','Custom quote creation','Aesthetic backgrounds','Private on-device storage','Premium features','Lightweight anonymous analytics'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.quoteorbit.quote_orbit']]},
+    {id:'artoria',name:'Artoria',sub:'Coloring book',tags:['Creative tool','Android app'],
+     desc:'Coloring pages across themes for kids, teens and adults, plus a free-draw canvas for sketching, doodling and painting.',
+     feat:['Themed coloring pages with tap-to-fill','Free-draw canvas with smooth brushes','Export to gallery and share','Works offline','One-time premium upgrade','Ad-free full library when upgraded'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.colorbook.nextcode.artoria']]},
+    {id:'status',name:'Status Saver',sub:'Video downloader',tags:['Utility','Android app'],
+     desc:'Save WhatsApp status and story photos and videos in one tap, then watch, manage and share them from a private gallery.',
+     feat:['Fast HD saving','One-tap save','Built-in media player','Private gallery','Offline access','Lightweight interface'],
+     links:[[PLAY,'https://play.google.com/store/apps/details?id=com.status.saver.downloader.wa']]},
+    {id:'merge',name:'2248',sub:'Number merge',tags:['Puzzle game','Android'],
+     desc:'A take on 2048 where you connect chains of matching numbers to merge them into bigger tiles, with a dark, glowing premium look.',
+     feat:['Connect-and-merge gameplay','Boosters','Progression toward higher tiles','Multiple visual themes'],
+     links:[]},
+    {id:'arrow',name:'Arrow Puzzle',sub:'Directional puzzle',tags:['Puzzle game','Android'],
+     desc:'A puzzle game built around directional arrows and planning each move, set in a deep navy world with a gold hero piece.',
+     feat:['Arrow-based directional gameplay','Strategic movement puzzles','Polished navy and gold visual style'],
+     links:[]}
+  ];
+
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  var ext='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  /* ---------- Build work section ---------- */
+  var projEl=document.getElementById('projects'), stage=document.getElementById('stageScreen'), nav=document.getElementById('stageNav');
+  var heroScreen=document.getElementById('heroScreen');
+  P.forEach(function(p,i){
+    var art=document.createElement('article');art.className='proj';art.id='p-'+p.id;art.dataset.i=i;
+    art.setAttribute('aria-labelledby','h-'+p.id);
+    var links=p.links.length?p.links.map(function(l,j){return '<a class="btn '+(j===0?'btn-primary':'btn-ghost')+'" href="'+l[1]+'" target="_blank" rel="noopener">'+ext+'Get it on '+l[0]+'<span class="sr"> (opens '+esc(p.name)+' store page)</span></a>';}).join(''):'<span class="pending">Store link coming soon</span>';
+    art.innerHTML='<div class="inline-phone" aria-hidden="true"><div class="phone"><div class="screen"><div class="island"></div>'+S[p.id]().replace('class="s ','class="s on ')+'</div></div></div>'+
+      '<span class="proj-idx">'+String(i+1).padStart(2,'0')+' of '+P.length+'</span>'+
+      '<h3 id="h-'+p.id+'">'+esc(p.name)+'</h3>'+
+      '<div class="proj-meta"><span class="tag">'+esc(p.sub)+'</span>'+p.tags.map(function(t,k){return '<span class="tag'+(k===1?' plat':'')+'">'+esc(t)+'</span>';}).join('')+'</div>'+
+      '<p class="proj-desc">'+esc(p.desc)+'</p>'+
+      '<ul class="feat" aria-label="Key features">'+p.feat.map(function(f){return '<li>'+esc(f)+'</li>';}).join('')+'</ul>'+
+      '<div class="proj-links">'+links+'</div>';
+    projEl.appendChild(art);
+    stage.insertAdjacentHTML('beforeend',S[p.id]());
+    heroScreen.insertAdjacentHTML('beforeend',S[p.id]());
+    nav.insertAdjacentHTML('beforeend','<li><a href="#p-'+p.id+'">'+esc(p.name)+'</a></li>');
+  });
+
+  var stageSlides=stage.querySelectorAll('.s'), navLinks=nav.querySelectorAll('a');
+  function setStage(i){
+    stageSlides.forEach(function(s,k){s.classList.toggle('on',k===i);});
+    navLinks.forEach(function(a,k){a.setAttribute('aria-current',k===i?'true':'false');});
+  }
+  setStage(0);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setStage(+e.target.dataset.i);});},{rootMargin:'-45% 0px -45% 0px'});
+    document.querySelectorAll('.proj').forEach(function(a){io.observe(a);});
+  }
+
+  /* ---------- Hero phone carousel ---------- */
+  var heroSlides=heroScreen.querySelectorAll('.s'), pager=document.getElementById('pager'), heroApp=document.getElementById('heroApp');
+  var hi=0, timer=null;
+  P.forEach(function(p,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show '+p.name);
+    b.addEventListener('click',function(){showHero(i);stop();});
+    pager.appendChild(b);
+  });
+  var pagerBtns=pager.querySelectorAll('button');
+  function showHero(i){
+    hi=i;heroSlides.forEach(function(s,k){s.classList.toggle('on',k===i);});
+    pagerBtns.forEach(function(b,k){b.setAttribute('aria-current',k===i?'true':'false');});
+    heroApp.innerHTML=esc(P[i].name)+'<small>'+esc(P[i].sub)+'</small>';
+  }
+  function start(){if(reduce||timer)return;timer=setInterval(function(){showHero((hi+1)%P.length);},3200);}
+  function stop(){clearInterval(timer);timer=null;}
+  showHero(0);start();
+  var hs=document.querySelector('.hero-stage');
+  hs.addEventListener('mouseenter',stop);hs.addEventListener('mouseleave',start);
+  hs.addEventListener('focusin',stop);
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
+
+  /* ---------- Hero pointer light + tilt ---------- */
+  var hero=document.querySelector('.hero'), tilt=document.getElementById('tilt');
+  if(!reduce && window.matchMedia('(pointer:fine)').matches){
+    var raf=0;
+    hero.addEventListener('pointermove',function(e){
+      if(raf)return;raf=requestAnimationFrame(function(){raf=0;
+        var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+        hero.style.setProperty('--mx',(x*100)+'%');hero.style.setProperty('--my',(y*100)+'%');
+        tilt.style.setProperty('--ry',((x-.5)*16-4)+'deg');tilt.style.setProperty('--rx',((.5-y)*10+2)+'deg');
+      });
+    });
+    /* Magnetic buttons */
+    document.querySelectorAll('.mag').forEach(function(b){
+      b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.28)+'px)';});
+      b.addEventListener('pointerleave',function(){b.style.transform='';});
+    });
+  }
+
+  /* ---------- Reveal + process progress ---------- */
+  if('IntersectionObserver' in window && !reduce){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+  } else {document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+
+  var steps=document.getElementById('steps'), stepEls=steps.querySelectorAll('.step');
+  var ticking=false;
+  function onScroll(){
+    document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+    var r=steps.getBoundingClientRect(), mid=window.innerHeight*.6;
+    var p=Math.min(1,Math.max(0,(mid-r.top)/r.height));
+    steps.style.setProperty('--p',p.toFixed(3));
+    stepEls.forEach(function(s){s.classList.toggle('lit',s.getBoundingClientRect().top<mid);});
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
+  onScroll();
+
+  /* ---------- Mobile menu ---------- */
+  var btn=document.getElementById('menuBtn'), sheet=document.getElementById('sheet');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');sheet.setAttribute('aria-hidden',!open);
+    document.body.style.overflow=open?'hidden':'';
+  }
+  btn.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'));});
+  sheet.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+})();
 </script>
-</body></html>
+</body>
+</html>
